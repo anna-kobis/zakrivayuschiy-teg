@@ -18,7 +18,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   color: var(--accent-color, #000);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, sans-serif), sans-serif;
   font-size: 14px;
   background-color: var(--background-color, #fff);
   background-image: var(
@@ -68,7 +68,7 @@
 }
 
 .button__text {
-  font-family: var(--accent-font, monospace);
+  font-family: var(--accent-font, fantasy), fantasy;
   line-height: 0.9;
 }
 
@@ -87,17 +87,22 @@
 
 .header {
   margin-block: 100px;
-  font-family: var(--accent-font, monospace);
+  font-family: var(--accent-font, fantasy), fantasy;
   text-align: center;
   text-transform: uppercase;
 }
 
 .header__logo {
+  display: block;
   margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   font-size: var(
     --logo-size,
     clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem)
   );
+}
+
+.header__logo:focus-visible {
+  outline: none;
 }
 
 .header__title {
@@ -175,6 +180,9 @@
 .card__image {
   display: block;
   inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1 / 1;
 }
 
 .filter-low-saturate {
@@ -214,7 +222,7 @@
   inset-inline-end: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
   inset-block-start: clamp(1.5625rem, 1.5185rem + 0.1878vw, 1.6875rem);
   opacity: 50%;
-  font-family: var(--accent-font, monospace);
+  font-family: var(--accent-font, fantasy), fantasy;
   text-align: end;
   text-shadow: -1px -1px 0 var(--background-color, #fff),
     0 -1px 0 var(--background-color, #fff),
@@ -284,16 +292,13 @@
   padding: 10px 7px 7px;
 }
 
-.footer {
-  padding-block: 50px 103px;
-}
-
-.footer__button {
+.save-button {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 9px 7px;
   min-inline-size: clamp(19.375rem, 18.7368rem + 2.723vw, 21.1875rem);
+  margin-block: 50px 103px;
   padding: 15px;
 }
 
@@ -321,7 +326,7 @@
 
 .dialog__text {
   margin-block-start: 1px;
-  font-family: var(--accent-font, monospace);
+  font-family: var(--accent-font, fantasy), fantasy;
   line-height: 1.5;
 }
 
@@ -336,12 +341,9 @@
     padding-inline-start: 21px;
   }
 
-  .footer {
-    padding-block-end: 100px;
-  }
-
-  .footer__button {
+  .save-button {
     flex-direction: column;
+    margin-block-end: 100px;
   }
 
   .dialog {

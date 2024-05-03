@@ -42,7 +42,8 @@ input {
   cursor: pointer;
 }
 
-button:focus {
+button:focus,
+a:focus {
   outline: none;
 }
 
