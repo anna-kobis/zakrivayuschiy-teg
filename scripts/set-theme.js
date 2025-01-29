@@ -1,5 +1,8 @@
-/* Этот скрипт использует имена классов theme-menu__button, theme-dark, theme-light и theme-auto;
-еще атрибуты disabled и data-theme. Поэтому их нельзя менять в HTML. */
+/*
+  Классы для работы скрипта:
+- theme-menu__button, theme-dark, theme-light и theme-auto;
+- атрибуты disabled и data-theme.
+*/
 
 function changeTheme(theme) {
   document.documentElement.className = '';
